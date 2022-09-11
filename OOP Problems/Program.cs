@@ -1,4 +1,5 @@
-﻿using OOP_Problems.InventoryManagement;
+﻿using OOP_Problems.CommercialDataProcessing;
+using OOP_Problems.InventoryManagement;
 using OOP_Problems.InventoryManagementSystem;
 using OOP_Problems.StockAccountManagement;
 
@@ -9,12 +10,15 @@ namespace OOP_Problems
         const string INVENTORY_DATA_FILE_PATH = @"C:\GitRepository\ObjectOrientedProgram\OOP Problems\InventoryManagement\Inventory.json";
         const string INVENTORY_MANAGEMENT_DATA_FILE_PATH = @"C:\GitRepository\ObjectOrientedProgram\OOP Problems\InventoryManagementSystem\InventoryDetails.json";
         const string INVENTORY_STOCK_MANAGEMENT = @"C:\GitRepository\ObjectOrientedProgram\OOP Problems\StockAccountManagement\StockDetails.json";
+        const string STOCK_ACCOUNT_MANAGEMENT = @"C:\GitRepository\ObjectOrientedProgram\OOP Problems\CommercialDataProcessing\Stock.json";
+        const string COMPANY_ACCOUNT_MANAGEMENT = @"C:\GitRepository\ObjectOrientedProgram\OOP Problems\CommercialDataProcessing\Company.json";
+
         static void Main(string[] args)
         {
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("1.Display Inventory\n2.To Print Inventory Details Operations\n3.Stock Account Management System\n");
+                Console.WriteLine("1.Display Inventory\n2.To Print Inventory Details Operations\n3.Stock Account Management System\n4.Buy Or Sell Company Share\n");
                 Console.WriteLine("Please Enter Your Choice");
                 Console.WriteLine("---------------------------------------------------");
                 int option = Convert.ToInt32(Console.ReadLine());
@@ -87,6 +91,21 @@ namespace OOP_Problems
                         CreateStock createStock = new CreateStock();
                         createStock.ReadJsonFile(INVENTORY_STOCK_MANAGEMENT);
                         Console.WriteLine("----------------------------------------------\n");
+                        break;
+
+                    case 4:
+                        StockManagement stockManagement = new StockManagement();
+                        stockManagement.ReadJsonFileStock(STOCK_ACCOUNT_MANAGEMENT);
+                        stockManagement.ReadJsonFileCompany(COMPANY_ACCOUNT_MANAGEMENT);
+                        Company company = new Company()
+                        {
+                            Symbol = "Facebook",
+                            NoOfShare = 5,
+                            PricePerShare = 10,
+                        };
+                        stockManagement.BuyCompanyShare(company);
+                        stockManagement.WriteToJsonStock(STOCK_ACCOUNT_MANAGEMENT);
+                        stockManagement.WriteToJsonCompany(COMPANY_ACCOUNT_MANAGEMENT);
                         break;
 
                     default:

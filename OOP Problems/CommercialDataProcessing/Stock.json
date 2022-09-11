@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Facebook",
+    "NoOfShare": 60,
+    "PricePerShare": 20
+  },
+  {
+    "Name": "Amazon",
+    "NoOfShare": 45,
+    "PricePerShare": 40
+  },
+  {
+    "Name": "FlipKart",
+    "NoOfShare": 50,
+    "PricePerShare": 30
+  }
+]

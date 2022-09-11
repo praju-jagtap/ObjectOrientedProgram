@@ -1,0 +1,27 @@
+[
+  {
+    "Symbol": "Facebook",
+    "NoOfShare": 20,
+    "PricePerShare": 20
+  },
+  {
+    "Symbol": "Amazon",
+    "NoOfShare": 15,
+    "PricePerShare": 20
+  },
+  {
+    "Symbol": "FlipKart",
+    "NoOfShare": 10,
+    "PricePerShare": 20
+  },
+  {
+    "Symbol": "Meesho",
+    "NoOfShare": 10,
+    "PricePerShare": 60
+  },
+  {
+    "Symbol": "Myntra",
+    "NoOfShare": 10,
+    "PricePerShare": 50
+  }
+]
