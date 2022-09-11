@@ -1,5 +1,6 @@
 ﻿using OOP_Problems.InventoryManagement;
 using OOP_Problems.InventoryManagementSystem;
+using OOP_Problems.StockAccountManagement;
 
 namespace OOP_Problems
 {
@@ -7,12 +8,13 @@ namespace OOP_Problems
     {
         const string INVENTORY_DATA_FILE_PATH = @"C:\GitRepository\ObjectOrientedProgram\OOP Problems\InventoryManagement\Inventory.json";
         const string INVENTORY_MANAGEMENT_DATA_FILE_PATH = @"C:\GitRepository\ObjectOrientedProgram\OOP Problems\InventoryManagementSystem\InventoryDetails.json";
+        const string INVENTORY_STOCK_MANAGEMENT = @"C:\GitRepository\ObjectOrientedProgram\OOP Problems\StockAccountManagement\StockDetails.json";
         static void Main(string[] args)
         {
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("1.Display Inventory\n2.To Print Inventory Details Operations\n");
+                Console.WriteLine("1.Display Inventory\n2.To Print Inventory Details Operations\n3.Stock Account Management System\n");
                 Console.WriteLine("Please Enter Your Choice");
                 Console.WriteLine("---------------------------------------------------");
                 int option = Convert.ToInt32(Console.ReadLine());
@@ -79,6 +81,13 @@ namespace OOP_Problems
                             }
                         }
                     break;
+
+                    case 3:
+                        Console.WriteLine("------------------------Stock Account Management----------------------\n");
+                        CreateStock createStock = new CreateStock();
+                        createStock.ReadJsonFile(INVENTORY_STOCK_MANAGEMENT);
+                        Console.WriteLine("----------------------------------------------\n");
+                        break;
 
                     default:
                         Console.WriteLine("Invalid Choice");

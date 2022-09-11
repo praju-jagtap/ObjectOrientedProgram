@@ -1,0 +1,22 @@
+[
+  {
+    "ShareName": "Facebook",
+    "NumberOfShare": 50,
+    "SharePrice": 20
+  },
+  {
+    "ShareName": "Amazon",
+    "NumberOfShare": 50,
+    "SharePrice": 40
+  },
+  {
+    "ShareName": "FlipKart",
+    "NumberOfShare": 50,
+    "SharePrice": 30
+  },
+  {
+    "ShareName": "Myntra",
+    "NumberOfShare": 50,
+    "SharePrice": 15
+  }
+]
